@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #f0f4f8;
+  background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808); /* Tricolor Background */
   color: #333;
   position: relative;
   overflow: hidden;
