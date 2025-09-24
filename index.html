@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale-1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CIVIC EYE – Login</title>
   
   <link rel="stylesheet" href="style.css"/>
@@ -51,37 +51,30 @@
     <p style="text-align:center; font-size: 0.9rem; margin-top: 10px;"><a href="contact.html">Contact Us & Map</a></p>
   </div>
 
+  <footer>
+    <p>&copy; 2025-26 Smart India Hackathon. All rights reserved.</p>
+    <p>Team CodeForge | Contact: 8075185774, 8848081237</p>
+  </footer>
+
   <script type="module">
     import { auth, db } from "./firebase-config.js";
     import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
     import { doc, getDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
+    
+    // Your Firebase login logic...
     document.getElementById("loginBtn").addEventListener("click", async (event) => {
-      // Firebase login logic remains here...
+        // ...
     });
   </script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const quotes = [
-        {
-          text: "Every citizen of India must remember that he is an Indian and he has every right in this country but with certain duties.",
-          author: "Sardar Vallabhbhai Patel"
-        },
-        {
-          text: "Arise, awake, and stop not till the goal is reached.",
-          author: "Swami Vivekananda"
-        },
-        {
-          text: "The future depends on what you do today.",
-          author: "Mahatma Gandhi"
-        }
+        { text: "Every citizen of India must remember that he is an Indian and he has every right in this country but with certain duties.", author: "Sardar Vallabhbhai Patel" },
+        { text: "Arise, awake, and stop not till the goal is reached.", author: "Swami Vivekananda" },
+        { text: "The future depends on what you do today.", author: "Mahatma Gandhi" }
       ];
-
-      // Pick a random quote from the array
       const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
-      // Find the quote element and display the quote
       const quoteElement = document.getElementById('quote-display');
       if (quoteElement) {
         quoteElement.innerHTML = `“${randomQuote.text}”<br>– ${randomQuote.author}`;
