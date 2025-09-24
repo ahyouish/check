@@ -11,37 +11,21 @@
             height: 100%;
             overflow: hidden;
             font-family: 'Poppins', sans-serif;
-            background-color: #000;
-        }
-
-        #splash-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            z-index: -1;
+            background-color: #FFFFFF; /* White background */
         }
 
         .splash-content {
-            position: relative;
-            z-index: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
-            color: white;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
         }
         
         .splash-logo {
             width: 120px;
-            animation: fadeIn 2s ease-in;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .skip-button {
@@ -49,9 +33,9 @@
             bottom: 30px;
             right: 30px;
             padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 1px solid white;
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
             border-radius: 20px;
             text-decoration: none;
             cursor: pointer;
@@ -59,7 +43,7 @@
         }
 
         .skip-button:hover {
-            background-color: rgba(255, 255, 255, 0.4);
+            background-color: #e0e0e0;
         }
         
         @keyframes fadeIn {
@@ -70,11 +54,6 @@
 </head>
 <body>
 
-    <video autoplay muted loop id="splash-video">
-        <source src="logovid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     <div class="splash-content">
         <img src="logo.png" alt="Civic Eye Logo" class="splash-logo">
     </div>
@@ -82,10 +61,10 @@
     <a href="login.html" class="skip-button">Skip Intro</a>
 
     <script>
-        // Redirect to the login page after 5 seconds (5000 milliseconds)
+        // Redirect to the login page after 3 seconds
         setTimeout(function() {
             window.location.href = 'login.html';
-        }, 5000);
+        }, 3000);
     </script>
 
 </body>
