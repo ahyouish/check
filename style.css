@@ -26,8 +26,12 @@ body {
 }
 
 @keyframes scroll-gradient {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 
@@ -71,6 +75,7 @@ header h1 {
     -webkit-text-stroke: 1px #0d5c05;
     animation: scroll-gradient 5s linear infinite;
 }
+
 
 header p {
     margin-top: 5px;
@@ -170,7 +175,7 @@ button:hover {
   }
 }
 
-/* --- ADD THESE FOOTER STYLES --- */
+/* --- Footer Styles --- */
 footer {
   width: 100%;
   text-align: center;
